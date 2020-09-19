@@ -7,6 +7,7 @@ public class TestCommit {
         System.out.println("dasdsa");
         System.out.println("不打印args");
         System.out.println("d");
+        System.out.println("qin");
         System.out.println("nihaoya");
     }
 }
