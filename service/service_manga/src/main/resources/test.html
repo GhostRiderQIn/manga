@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<body>
+    <div id="app">
+        <img id="img" src="" alt="">
+        <button onclick="goNext()">下一页</button>
+        <button onclick="goPrev()">上一页</button>
+    </div>
+<script src="./jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+    function goNext() {
+        if(index >= list.length-1)
+            return ;
+        $('#img').attr('src',baseUrl + list[++index].contentPath);
+    }
+    function goPrev() {
+        if(index <= 0)
+            return ;
+        $('#img').attr('src',baseUrl + list[--index].contentPath);
+    }
+    var list;
+    var index = 0;
+    var baseUrl = 'http://localhost:8080/page'
+    $.ajax({
+        //请求方式
+        type : "get",
+        //请求的媒体类型
+        contentType: "application/json;charset=UTF-8",
+        //请求地址
+        url : "http://localhost:8080/manga/page/getlite/1301740508682846209",
+        //请求成功
+        success : function(result) {
+            console.log(result);
+            list = result.data.pages;
+            $('#img').attr('src',baseUrl + list[index].contentPath);
+        },
+        //请求失败，包含具体的错误信息
+        error : function(e){
+            console.log(e.status);
+            console.log(e.responseText);
+        }
+    });
+
+    // const service = axios.create({
+    //     baseURL: 'http://localhost:8080', // api的base_url
+    //     timeout: 20000 // 请求超时时间
+    // })
+    // var app = new Vue({
+    //     el: '#app',
+    //     data(){
+    //         return {
+    //             message: 'Hello Vue!',
+    //             src:'',
+    //             pageList:[]
+    //         }
+    //     },
+    //     methods:{
+    //         init(){
+    //             service.get('/manga/pagelite/get/1301740508682846209',)
+    //                 .then(function(res){
+    //                     this.pageList = res.data;
+    //                     console.log(this.pageList)
+    //                 }).catch(function (error) {
+    //                 console.log(error);
+    //             });
+    //         }
+    //     },
+    //     created (){
+    //         console.log(123)
+    //         this.init()
+    //     }
+    // })
+</script>
+</body>
+
+
+</html>

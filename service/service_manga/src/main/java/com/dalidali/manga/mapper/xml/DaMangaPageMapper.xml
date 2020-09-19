@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dalidali.manga.mapper.DaMangaPageMapper">
+    <insert id="insertBatch" parameterType="List">
+        insert into da_manga_page (manga_id,chapter_id,title,page_num,content_path,gmt_create,gmt_modified) values
+        <foreach collection="list" index="index" item="item" open="" close="" separator=",">
+        (#{item.mangaId},#{item.chapterId},#{item.title},#{item.pageNum},#{item.contentPath},#{item.gmtCreate},#{item.gmtModified})
+        </foreach>
+    </insert>
+</mapper>
