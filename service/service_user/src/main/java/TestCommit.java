@@ -9,5 +9,6 @@ public class TestCommit {
         System.out.println("d");
         System.out.println("qin");
         System.out.println("nihaoya");
+        System.out.println("args = " + args);
     }
 }
