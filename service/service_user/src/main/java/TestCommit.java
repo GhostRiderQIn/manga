@@ -8,5 +8,6 @@ public class TestCommit {
         System.out.println("不打印args");
         System.out.println("d");
         System.out.println("nihaoya");
+        System.out.println("args = " + args);
     }
 }
