@@ -5,11 +5,71 @@
     <title>Title</title>
 </head>
 <body>
-
+<button onclick="f()">点击</button>
+<!--<video controls src="http://123.150.78.222/vmtt.tc.qq.com/1098_2195f961f509b429fff7920ff82f51a8.f0.mp4?vkey=7C488943831177D7DC7F503944E659E3300A52AFB5B5871D775F1692F5B3720F9F20EA03F1B81D3E084437B821169F91DCA0A0A1032AA7F34A8D956BCC8B7404D972BDDE63BE409DDA5FA52FCB3A905A64F0F1465F816C59">-->
+<!--</video>-->
 </body>
 <script src="./jquery-3.5.1.min.js"></script>
 <script>
-    // function f() {
+    function f() {
+        var data={
+            'e': 'ig8euxZM2rNcNbRMhbUVhoM17wNBhwdEto8g5X10ugNcXBlqNxHxNEVE5XREto8KqJZHUa6m5J0SqE85tZvEuENvNo8g2ENvNo8i8o859r1qXg8xNEVE5XREto8GuFGv2U7SuxI72X6fTr859r1qXg8gNEVE5XREto8z5JZC2X2gkX5L5F1eTX1jkXlsTXHeux_f2o859IB_',
+            'uipk': '5',
+            'nbs': '1',
+            'deadline': '1600534255',
+            'gen': 'playurl',
+            'os': 'kodobv',
+            'oi': '3739127130',
+            'trid': 'f6fe1d4f627a4ee388f651ee175613eeu',
+            'platform': 'pc',
+            'upsig': '3a6a67eddb2323e5e65e85e319b6c753',
+            'uparams': 'e,uipk,nbs,deadline,gen,os,oi,trid,platform',
+            'mid': '386263075',
+            'orderid': '0,3',
+            'agrr': '0',
+            'logo': '80000000'
+        }
+        console.log("1233")
+        $.ajax({
+            method:'get',
+            headers:{
+                'method': 'GET',
+                'authority': 'upos-sz-mirrorhw.bilivideo.com',
+                'path': '/upgcxcode/95/69/206856995/206856995-1-16.mp4?e=ig8euxZM2rNcNbRMhbUVhoM17wNBhwdEto8g5X10ugNcXBlqNxHxNEVE5XREto8KqJZHUa6m5J0SqE85tZvEuENvNo8g2ENvNo8i8o859r1qXg8xNEVE5XREto8GuFGv2U7SuxI72X6fTr859r1qXg8gNEVE5XREto8z5JZC2X2gkX5L5F1eTX1jkXlsTXHeux_f2o859IB_&uipk=5&nbs=1&deadline=1600527887&gen=playurl&os=kodobv&oi=3739127130&trid=f6fe1d4f627a4ee388f651ee175613eeu&platform=pc&upsig=3a6a67eddb2323e5e65e85e319b6c753&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,platform&mid=386263075&orderid=0,3&agrr=0&logo=80000000',
+                'scheme': 'https',
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en-US;q=0.7,en;q=0.6',
+                'referer': 'https://www.bilibili.com/bangumi/play/ep118250',
+                'sec-fetch-dest': 'embed',
+                'sec-fetch-mode': 'no-cors',
+                'sec-fetch-site': 'cross-site',
+                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36'    ,
+                'x-requested-with': 'ShockwaveFlash/32.0.0.433'
+            },
+            url:'https://upos-sz-mirrorkodo.bilivideo.com/upgcxcode/95/69/206856995/206856995-1-16.mp4?e=ig8euxZM2rNcNbRMhbUVhoM17wNBhwdEto8g5X10ugNcXBlqNxHxNEVE5XREto8KqJZHUa6m5J0SqE85tZvEuENvNo8g2ENvNo8i8o859r1qXg8xNEVE5XREto8GuFGv2U7SuxI72X6fTr859r1qXg8gNEVE5XREto8z5JZC2X2gkX5L5F1eTX1jkXlsTXHeux_f2o859IB_&uipk=5&nbs=1&deadline=1600527887&gen=playurl&os=kodobv&oi=3739127130&trid=f6fe1d4f627a4ee388f651ee175613eeu&platform=pc&upsig=3a6a67eddb2323e5e65e85e319b6c753&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,platform&mid=386263075&orderid=0,3&agrr=0&logo=80000000',
+            // data:data,
+            success: function(data) {
+                console.log(data)
+                console.log("11")
+            },
+            error: function(err) {
+                console.log(err)
+            },
+        })
+        // $.ajax({
+        //     method:'get',
+        //     // headers:headers,
+        //     url:'www.baidu.com',
+        //     // data:data,
+        //     success: function(data) {
+        //         console.log(data)
+        //         console.log("11")
+        //     },
+        // })
+    }
+
+    // function f() 
     //
     //     $.ajax({
     //         url: 'http://localhost:8080/manga/page/get',
