@@ -26,7 +26,7 @@ public class CodeGenerator {
         // 2、全局配置
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir("D:\\IdeaProject\\manga\\service\\service_manga" + "/src/main/java");
+        gc.setOutputDir("D:\\IdeaProject\\manga\\service\\service_banner" + "/src/main/java");
         gc.setAuthor("qinda");
         gc.setOpen(false); //生成后是否打开资源管理器
         gc.setFileOverride(false); //重新生成时文件是否覆盖
@@ -39,7 +39,7 @@ public class CodeGenerator {
 
         // 3、数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/dalidali?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC");
+        dsc.setUrl("jdbc:mysql://59.110.152.204:3306/dalidali?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("123456");
@@ -50,7 +50,7 @@ public class CodeGenerator {
         PackageConfig pc = new PackageConfig();
 
         pc.setParent("com.dalidali");
-        pc.setModuleName("manga"); //模块名
+        pc.setModuleName("banner"); //模块名
 
         pc.setController("controller");
         pc.setEntity("entity");
@@ -60,7 +60,7 @@ public class CodeGenerator {
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("da_manga_detail","da_manga_detail_style","da_manga_page","da_manga_style");
+        strategy.setInclude("da_manga_banner");
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<video >
+    <resource src="" type="video/x-flv"></resource>
+</video>
+<object
+        classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+        codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0"
+        width="640"
+        height="480"
+        id="VideoPlayer"
+        align="middle"
+>
+    <param name="allowScriptAccess" value="*" />
+    <param name="allowFullScreen" value="true" />
+    <param
+            name="movie"
+            value="./flvplayer.swf?video=http://59.110.152.204:8080/page/2.flv&autoplay=true"
+    />
+    <param name="quality" value="high" />
+    <param name="bgcolor" value="#ffffff" />
+    <embed
+            src="./flvplayer.swf"
+            flashvars="vcastr_file=http://59.110.152.204:8080/page/2.flv"
+            quality="high"
+            bgcolor="#000000"
+            width="500"
+            height="380"
+            name="VideoPlayer"
+            align="middle"
+            allowScriptAccess="*"
+            allowfullscreen="true"
+            type="application/x-shockwave-flash"
+            pluginspage="http://www.macromedia.com/go/getflashplayer"
+    />
+</object>
+
+</body>
+</html>

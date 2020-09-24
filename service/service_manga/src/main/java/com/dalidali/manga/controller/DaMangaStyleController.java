@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-08-26
  */
 @RestController
-@RequestMapping("/manga/da-manga-style")
+@RequestMapping("/manga/style")
 public class DaMangaStyleController {
 
 }

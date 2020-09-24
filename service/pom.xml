@@ -14,6 +14,8 @@
     <modules>
 <!--        <module>service_user</module>-->
         <module>service_manga</module>
+        <module>service_banner</module>
+        <module>service_static</module>
     </modules>
 
     <dependencies>
